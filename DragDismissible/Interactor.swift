@@ -9,6 +9,14 @@
 import UIKit
 
 class Interactor: UIPercentDrivenInteractiveTransition {
-    var hasStarted: Bool = false
-    var shouldFinish: Bool = false
+    var hasStarted: Bool = false {
+        didSet {
+            print("hasStarted: \(hasStarted)")
+        }
+    }
+    var shouldFinish: Bool = false {
+        didSet {
+            print("shouldFinish: \(shouldFinish)")
+        }
+    }
 }
