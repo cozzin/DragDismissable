@@ -28,7 +28,7 @@ extension DragDismissible where Self: UIViewController {
             return objc_getAssociatedObject(self, &AssociatedKeys.interactor) as? Interactor
         }
         set(value) {
-            objc_setAssociatedObject(self, &AssociatedKeys.interactor, value, .OBJC_ASSOCIATION_ASSIGN)
+            objc_setAssociatedObject(self, &AssociatedKeys.interactor, value, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     
