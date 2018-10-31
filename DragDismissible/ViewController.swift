@@ -8,29 +8,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
-    let interactor = Interactor()
+class ViewController: UIViewController, DragModalPresentable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func onTouchButton(_ sender: Any) {
-        let targetViewController = ModalViewController()
-        targetViewController.interactor = interactor
-        targetViewController.transitioningDelegate = self
-        targetViewController.modalPresentationStyle = .custom
-        present(targetViewController, animated: true)
+        presentDragDismissible(ModalViewController(), animated: true)
     }
-}
-
-extension ViewController: UIViewControllerTransitioningDelegate {
+    
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return DismissAnimator()
+        return animationControllerForDragDismissed()
     }
     
     func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return interactor.hasStarted ? interactor : nil
+        return interactionControllerForDragDismissal()
     }
 }

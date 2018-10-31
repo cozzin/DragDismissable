@@ -15,8 +15,10 @@
 		C134767321889C6000E5180E /* DragDismissibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134767221889C6000E5180E /* DragDismissibleTests.swift */; };
 		C134767E21889C6000E5180E /* DragDismissibleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134767D21889C6000E5180E /* DragDismissibleUITests.swift */; };
 		C134768C21889D1A00E5180E /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134768B21889D1A00E5180E /* ModalViewController.swift */; };
-		C134768E21889D3100E5180E /* DismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134768D21889D3100E5180E /* DismissAnimator.swift */; };
-		C134769021889D4300E5180E /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134768F21889D4300E5180E /* Interactor.swift */; };
+		C134769821892F5E00E5180E /* DragDismissible.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134769721892F5E00E5180E /* DragDismissible.swift */; };
+		C134769A21892F8000E5180E /* DragModalPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134769921892F8000E5180E /* DragModalPresentable.swift */; };
+		C134769C21892F9000E5180E /* DismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134769B21892F9000E5180E /* DismissAnimator.swift */; };
+		C134769E21892FA000E5180E /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134769D21892FA000E5180E /* Interactor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +53,10 @@
 		C134767D21889C6000E5180E /* DragDismissibleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDismissibleUITests.swift; sourceTree = "<group>"; };
 		C134767F21889C6000E5180E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C134768B21889D1A00E5180E /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
-		C134768D21889D3100E5180E /* DismissAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissAnimator.swift; sourceTree = "<group>"; };
-		C134768F21889D4300E5180E /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		C134769721892F5E00E5180E /* DragDismissible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDismissible.swift; sourceTree = "<group>"; };
+		C134769921892F8000E5180E /* DragModalPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragModalPresentable.swift; sourceTree = "<group>"; };
+		C134769B21892F9000E5180E /* DismissAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissAnimator.swift; sourceTree = "<group>"; };
+		C134769D21892FA000E5180E /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		C134765121889C5F00E5180E = {
 			isa = PBXGroup;
 			children = (
+				C134769621892F3B00E5180E /* Sources */,
 				C134765C21889C5F00E5180E /* DragDismissible */,
 				C134767121889C6000E5180E /* DragDismissibleTests */,
 				C134767C21889C6000E5180E /* DragDismissibleUITests */,
@@ -106,8 +111,6 @@
 				C134765D21889C5F00E5180E /* AppDelegate.swift */,
 				C134765F21889C5F00E5180E /* ViewController.swift */,
 				C134768B21889D1A00E5180E /* ModalViewController.swift */,
-				C134768D21889D3100E5180E /* DismissAnimator.swift */,
-				C134768F21889D4300E5180E /* Interactor.swift */,
 				C134766121889C5F00E5180E /* Main.storyboard */,
 				C134766421889C6000E5180E /* Assets.xcassets */,
 				C134766621889C6000E5180E /* LaunchScreen.storyboard */,
@@ -132,6 +135,17 @@
 				C134767F21889C6000E5180E /* Info.plist */,
 			);
 			path = DragDismissibleUITests;
+			sourceTree = "<group>";
+		};
+		C134769621892F3B00E5180E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C134769721892F5E00E5180E /* DragDismissible.swift */,
+				C134769921892F8000E5180E /* DragModalPresentable.swift */,
+				C134769B21892F9000E5180E /* DismissAnimator.swift */,
+				C134769D21892FA000E5180E /* Interactor.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,9 +281,11 @@
 			files = (
 				C134766021889C5F00E5180E /* ViewController.swift in Sources */,
 				C134768C21889D1A00E5180E /* ModalViewController.swift in Sources */,
-				C134769021889D4300E5180E /* Interactor.swift in Sources */,
+				C134769E21892FA000E5180E /* Interactor.swift in Sources */,
+				C134769C21892F9000E5180E /* DismissAnimator.swift in Sources */,
 				C134765E21889C5F00E5180E /* AppDelegate.swift in Sources */,
-				C134768E21889D3100E5180E /* DismissAnimator.swift in Sources */,
+				C134769A21892F8000E5180E /* DragModalPresentable.swift in Sources */,
+				C134769821892F5E00E5180E /* DragDismissible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
