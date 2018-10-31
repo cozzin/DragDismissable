@@ -2,7 +2,7 @@
 //  DismissAnimator.swift
 //  DragDismissible
 //
-//  Created by seongho on 30/10/2018.
+//  Created by seongho on 31/10/2018.
 //  Copyright © 2018 seongho. All rights reserved.
 //
 
